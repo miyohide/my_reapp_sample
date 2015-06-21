@@ -1,8 +1,14 @@
-import './theme';
-import { router, route } from 'reapp-kit';
+import '../assets/todomvc/base.css';
+import './store';
+import { Router, router, route } from 'reapp-kit';
 
-router(require,
-  route('home', '/',
-    route('sub')
+const routes =
+  route('todos', '/',
+    route('all', { default: true }),
+    route('completed'),
+    route('active')
   )
-);
+
+router(require, routes, {
+    location: Router.HashLocation
+});

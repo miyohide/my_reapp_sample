@@ -10,6 +10,10 @@ class Home extends React.Component {
           <Button onTap={() => this.router().transitionTo('sub')}>
             Go to sub view
           </Button>
+
+          <Button onTap={() => this.router().transitionTo('sub2')}>
+            Go to sub2 view
+          </Button>
         </View>
 
         {this.props.child()}
@@ -18,7 +22,7 @@ class Home extends React.Component {
   }
 }
 
-export default Reapp(Home);
+// export default Reapp(Home);
 
 /*
  This is your root route. When you wrap it with Reapp()

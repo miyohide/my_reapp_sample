@@ -1,14 +1,8 @@
-import '../assets/todomvc/base.css';
-import './store';
-import { Router, router, route } from 'reapp-kit';
+import "reapp-ui";
+import "reapp-ui/lib/desktopTouch";
 
-const routes =
-  route('todos', '/',
-    route('all', { default: true }),
-    route('completed'),
-    route('active')
-  )
+import Router from "reapp-routes/react-router";
+import Routes from "./routes";
 
-router(require, routes, {
-    location: Router.HashLocation
-});
+Router(Routes);
+
